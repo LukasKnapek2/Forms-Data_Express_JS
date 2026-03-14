@@ -7,11 +7,8 @@
 <body>
   <h1><%= title %></h1>
 <!-- In views/index.ejs -->
+ <h1>Search Result</h1>
 <ul>
-  <li><form action="/search" method="GET">
-    <input type="text" name="query" placeholder="Search users... by name or email">
-    <button type="submit">Search</button>
-  </form></li>
   <% if (locals.users) {%>
     <% users.forEach(function(user) { %>
       <li>ID: <%= user.id %>, Name: <%= user.firstName %> <%= user.lastName %></li>
@@ -28,5 +25,6 @@
 </ul>
 
   <a href="/create">Create a user</a>
+  <p><a href="/">Back to home</a></p>
 </body>
 </html>
